@@ -14,7 +14,7 @@ my_server = Student()
 
 
 def printHi():
-    return "hi"
+    return "hello"
 
 @app.route("/")
 def data():
