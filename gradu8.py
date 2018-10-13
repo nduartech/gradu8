@@ -37,12 +37,14 @@ class Course(object):
     #If credits is -1, it hasn't been properly initialized
     credits = -1
 
-    def __init__(self,ID,name,preReqs,children,concentrations):
+    def __init__(self,ID,name,preReqs,children,concentrations,credits):
         self.ID = ID
         self.name = name
         self.preReqs = preReqs
         self.children = children
         self.concentrations = concentrations
+        self.credits = credits
+
 
 
 class PriorityQueue(object):
@@ -82,15 +84,36 @@ class PriorityQueue(object):
 from flask import Flask
 app = Flask(__name__)
 
+def fastPath(student):
+    allSems = []
+    explored = {}
+    PQ = initializeQueue(student)
+    nonCS = set([Course(0,"CHEM 111",[],[],[],4),Course(0,"GEOL 101",[],[],[],4),Course(0,"ENG 112",[],[],[],4),Course(0,"KIN 100",[],[],[],4),Course(0,"COMP-LIT 114",[],[],[],4),Course(0,"ANTHRO 102",[],[],[],4),Course(0,"EDUC 115",[],[],[],4)])
+    for tclass in student.taken:
+        explored[tclass] = 1
+    while not Optimal(allSems, student.units) and len(nonCS) > 0:
+        semester = []
+        credits = 0
+        while credits < 19:
+            if not PQ.empty() and credits + PQ.peek().credits <= 19:
+                course = PQ.get()
+                explored[course.ID] = 1
+                semester.add(course)
+                student.taken.add(course.code)
+                credits += course.credits
+            else:
+                while credits <= 15 and len(nonCS) > 0:
+                    semester.add(nonCS.pop())
+                    credits += 4
+        student.units += credits
+        PQ = initializeQueue(student)
+        allSems.add(semester)
+
+    return allSems
 
 @app.route("/")
 def data():
-    PQ = PriorityQueue()
-    course1 = Course(1,"CS121",[],[],[])
-    PQ.add(course1)
-
-    course = PQ.get()
-    return course.name
+    
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0")
