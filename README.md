@@ -14,7 +14,7 @@ source py3/bin/activate
 
 - Server setup
 ```
-pip install Flask
+pip install -r requirements.txt
 export FLASK_APP=gradu8.py
 flask run
 ```
