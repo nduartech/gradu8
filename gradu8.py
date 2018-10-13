@@ -14,8 +14,9 @@ class Student(object):
 
 @app.route("/")
 def hello():
-	S = Student("FA18",[],"AI")
-	return S.semester + " " + S.concentration
+	# S = Student("FA18",[],"AI")
+	# return S.semester + " " + S.concentration
+	return "hi"
 
 if __name__ == "__main__":
   app.run()
