@@ -9,13 +9,18 @@ class Student:
 from flask import Flask
 app = Flask(__name__)
 
+
 my_server = Student()
+
+
+def printHi():
+    return "hi"
 
 @app.route("/")
 def data():
     my_server.degree = "BS"
     my_server.major = "CS"
-    return my_server.degree + " in " + my_server.major
+    return printHi()
 
 
 if __name__ == "__main__":
