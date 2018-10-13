@@ -8,9 +8,12 @@ class Student(object):
     #desired concentration
     concentration = ""
 
-    def __init__(self,taken,concent):
+    credits = -1 
+
+    def __init__(self,taken,concent,credits):
         self.taken = taken
         self.concentration = concent
+        self.credits = credits
 
     
 class Course(object):
