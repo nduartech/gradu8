@@ -125,13 +125,13 @@ def checkPreReqs(preReqs, taken):
 
 
 def Optimal(allSems, units):
-    core_Courses = set(["CS121","CS187","MATH131","MATH132","MATH233","STAT515","MATH235","CS230","CS220","CS240","CS250","CS311","CS320","CS326"])
+    core_Courses = set([72717,72718,72684,76932,76889,80027,76894,72752,72751,72748,72721,72705,72724,72726,72711])
     hundred3 = 0
     hundred4 = 0
     for semester in allSems:
         for course in semester:
-            if course.name in core_Courses:
-                core_Courses.remove(course.name)
+            if course.ID in core_Courses:
+                core_Courses.remove(course.ID)
             elif course.name[2] == '3':
                 hundred3 += 1
             elif course.name[2] == '4':
