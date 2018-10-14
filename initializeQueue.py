@@ -39,5 +39,3 @@ def checkPreReqs(preReqs, taken):
             
             
             
-            
-    return True
