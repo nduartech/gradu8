@@ -1,0 +1,89 @@
+    #
+    #       ======================================    
+    #                DICTIONARY TUTORIAL 
+    #       ======================================
+    #
+    #
+    #     In python, dictionaries are declared like this:
+    #      
+    #                  classes = {}
+    #
+    #        this is how you add to dictionaries:
+    #
+    #             classes[courseID] = courseObject
+    #
+    #
+    #  Basically, dictionaries are pairings between "keys" and 
+    #  "values". They fall in the format:
+    # 
+    #                    key : values
+    #
+    #  When you access the dictionary, you pass in a key, and it returns
+    #  a value; it's sort of like when you access the first element of an 
+    #  array like saying "array[0]", except you pass the dictionary keys
+    #  instead of indices. 
+    #
+    #  So, when you add to a dictionary by saying 
+    #
+    #              classes[courseID] = courseObject
+    #
+    #  you're adding an element with "courseID" as a key and "courseObject"
+    #  as a value. Now, here's a description of what those elemlents actually *are*
+    #
+    #       courseID
+    #       ========
+    #       This guy is an integer, representing the 5-digit Spire ID code that's
+    #       associated with a course! 
+    #
+    #       courseObject
+    #       ========
+    #       This is a Course object! I'm going to teach you how to initialize these,
+    #       but basically, they have the following attributes:
+    #       
+    #           - ID (an int, the 5-digit one from Spire; sorta like 72764)
+    #           - name (a string, put in like "CS383: Artificial Intelligence")
+    #           - preReqs(a list of pre-requisites, which is a list of lists. Basically, lists
+    #                     are going to be made like this:
+    #
+    #                               list = []
+    #
+    #                      You can add elements like this:
+    #
+    #                               list.append([72764])
+    #
+    #                      Right there, I just appended a list TO a list. The pre-reqs are 
+    #                      going to be encoded as lists of courseIDs - the reason for that is
+    #                      because of courses that can have "class A OR class B" as a pre-req.
+    #                      Take CS383, for instance - it has the following prereqs:
+    #                       
+    #                        CS220 or CS230
+    #                        CS240 or STAT515
+    #
+    #                      To add these as a list of prereqs, you'd make the list like so:
+    #
+    #                               list.append([72751, 72752])
+    #                               list.append([72748, 80027])
+    #
+    #           - children (this is an array of ints, each one representing the courseIDs of 
+    #                       classes that you can take *after* taking this class. So, to add
+    #                       the children of CS383 - let's say it's CS585 and CS589 - you'd
+    #                       put something like: [72713, 72821]    
+    #
+    #           - concentrations (this is a list of strings, each one representing a concentration
+    #                             that requires this class. For CS383, you'd want to put something like:
+    #                             ["AI", "ROBVISGR"]
+    #
+    #
+    #   To initialize a course, you put the attributes in like this:
+    #
+    #       newCourse = Course(ID, name, preReqs, children, concentrations)
+    #
+    #    So, with that being said, you're going to add a new class to the dictionary by doing something like this:
+    #
+    #            cs383 = Course(72764, "CS383: Artificial Intelligence", [[72751, 72752], [72748, 80027]], [72713, 72821], ["AI", "ROBVISGR"])
+    #            classes[72764] = cs383
+    #
+    #    The course initialization is a little tricky, so make sure you're careful as you're typing it up! 
+    #    I've done one for CS121 below - that's real code, so just imitate that! Let me know if you need help! 
+    #
+   
