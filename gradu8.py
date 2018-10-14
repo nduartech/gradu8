@@ -330,6 +330,8 @@ def index():
 def student():
     if request.method == 'POST':
         formObj = request.form
+        s = Student([72717,72684],"AI",8)
+        schedule = findPath(s)
         print(student)
         return render_template('display.html',SStudent)
 
