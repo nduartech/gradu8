@@ -170,15 +170,16 @@ def fastPath(student):
 
 @app.route("/")
 def index():
-    return render_template('index.html')
-
-@app.route("/student")
-def student():
-    return redirect(url_for('schedule'))
-
-@app.route("/schedule")
-def schedule():
-    return render_template('schedule.html')
+    return "Rochish"
+#     return render_template('index.html')
+#
+# @app.route("/student")
+# def student():
+#     return redirect(url_for('schedule'))
+#
+# @app.route("/schedule")
+# def schedule():
+#     return render_template('schedule.html')
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0")
