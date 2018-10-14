@@ -15,7 +15,13 @@
 <body>
 <img src="{{ url_for('static', filename='images/hourglass.png')}}" >
 <div>
-
+      {% for s in schedule: %}
+        <li>
+          {% for course in s: %}
+            
+          {% %}
+        </li>
+      {% %}
 </div>
 </body>
 </html>

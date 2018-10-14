@@ -332,8 +332,7 @@ def student():
         formObj = request.form
         s = Student([72717,72684],"AI",8)
         schedule = findPath(s)
-        print(student)
-        return render_template('display.html',SStudent)
+        return render_template('display.html',schedule)
 
 if __name__ == "__main__":
     app.run(debug = True)
