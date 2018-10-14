@@ -84,6 +84,23 @@ class PriorityQueue(object):
 from flask import Flask
 app = Flask(__name__)
 
+
+def Optimal(allSems, units):
+    core_Courses = set(["CS121","CS187","MATH131","MATH132","MATH233","STAT515","MATH235","CS230","CS220","CS240","CS250","CS311","CS320","CS326"])
+    hundred3 = 0
+    hundred4 = 0
+    for semester in allSems:
+        for course in semester:
+            if course.name in core_Courses:
+                core_Courses.remove(course.name)
+            elif course.name[2] == '3':
+                hundred3 += 1
+            elif course.name[2] == '4':
+                hundred4 += 1
+
+    return hundred3 >= 3 and hundred4 >= 3 and len(core_Courses) <=2 and units >= 120
+
+
 def fastPath(student):
     allSems = []
     explored = {}
