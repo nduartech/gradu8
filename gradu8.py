@@ -1,23 +1,22 @@
 class Student:
     def __init__(self):
+        self.name = ""
         self.taken = []
-        self.degree = ""
-        self.major = ""
+        self.degree = "B.S."
+        self.major = "Computer Science"
         self.concentration = ""
-        self.lcs = ""
 
-from flask import Flask
+from flask import Flask, render_template, request
 app = Flask(__name__)
-
+app.secret_key = 's3cr3t'
 
 my_server = Student()
 
-
-def printHi():
+def setup():
     return "hi"
 
 @app.route("/")
-def data():
+def init():
     my_server.degree = "BS"
     my_server.major = "CS"
     return printHi()
