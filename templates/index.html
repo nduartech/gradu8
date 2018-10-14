@@ -7,11 +7,11 @@
     <title>Gradua8: Academic Advising Automated</title>
 
     <!-- Font Icon -->
-    <link rel="stylesheet" href="fonts/material-icon/css/material-design-iconic-font.min.css">
-    <link rel="stylesheet" href="vendor/nouislider/nouislider.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='fonts/material-icon/css/material-design-iconic-font.min.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='vendor/nouislider/nouislider.min.css')}}">
 
     <!-- Main css -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css')}}">
 </head>
 <body>
 
@@ -23,7 +23,7 @@
             <div class="signup-content">
              
                 </div>
-                     <img src="images/hourglass.png" align="middle">
+                     <img src="{{ url_for('static', filename='images/hourglass.png')}}" >
 
                 <div class="signup-form">
                     <div class ="Title">
@@ -31,7 +31,7 @@
                     </div>
                      
                     
-                    <form method="POST" class="register-form" id="register-form">
+                    <form action="{{ url_for('student')}}" method="post" class="register-form" id="register-form">
                         <div class="form-row">
         
                             <div class="form-group">
@@ -49,7 +49,6 @@
                               
                                 <div class="label-flex">
                                         <label for="meal_preference">Concentration</label>
-                                        <a href="index.html#" class="form-link">Not listed?</a>
                                     </div>
                                     <div class="select-list">
                                         <select name="meal_preference" id="meal_preference">
@@ -116,7 +115,7 @@
    
     
     <div>
-    	<form action="" method="post">
+    	
     <b>What classes do you have credit for?</b>
     
     <h3>Computer Science</h3>
@@ -169,11 +168,10 @@
         </span>
        </label>
         
-       </form>
+       
    </div>
                         <div class="form-submit">
                             <input type="submit" value="Submit" class="submit" id="submit" name="submit" />
-                            <input type="submit" value="Reset" class="submit" id="reset" name="reset" />
                         </div>
                     </form>
                 </div>
@@ -183,20 +181,12 @@
  
 
     <!-- JS -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/nouislider/nouislider.min.js"></script>
-    <script src="vendor/wnumb/wNumb.js"></script>
-    <script src="vendor/jquery-validation/dist/jquery.validate.min.js"></script>
-    <script src="vendor/jquery-validation/dist/additional-methods.min.js"></script>
-    <script src="js/main.js"></script>
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script src="{{ url_for('static', filename'vendor/jquery/jquery.min.js')}}"></script>
+    <script src="{{ url_for('static', filename'vendor/nouislider/nouislider.min.js')}}"></script>
+    <script src="{{ url_for('static', filename'vendor/wnumb/wNumb.js')}}"></script>
+    <script src="{{ url_for('static', filename'vendor/jquery-validation/dist/jquery.validate.min.js')}}"></script>
+    <script src="{{ url_for('static', filename'vendor/jquery-validation/dist/additional-methods.min.js')}}"></script>
+    <script src="{{ url_for('static', filename'js/main.js')}}"></script>
 
-  gtag('config', 'UA-23581568-13');
-</script>
-</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+</body>
 </html>
