@@ -90,28 +90,28 @@ def initializeQueue(student):
     #possible is a list of the possible courses
     #a student could take next semester
     possible = []
-    
+
     gd = GlobalDictionary()
-    
+
     for takenCourseID in student.taken:
         takenCourse = gd.classes[takenCourseID]
-        
+
         for childID in takenCourse.children:
             childCourse = gd.classes[childID]
             possible.append(childCourse)
-            
+
     toReturn = PriorityQueue()
-    
+
     for possibleCourse in possible:
         if possibleCourse not in toReturn.courses and possibleCourse.ID not in student.taken and checkPreReqs(possibleCourse.preReqs,student.taken):
             toReturn.add(possibleCourse)
-    
+
     return toReturn
-        
-        
-        
+
+
+
 def checkPreReqs(preReqs, taken):
-            
+
     # preReqs is a list of lists and there needs to be something
     # in taken for each of the lists inside
     for list in preReqs:
@@ -172,6 +172,13 @@ def fastPath(student):
 def index():
     return render_template('index.html')
 
+@app.route("/student")
+def student():
+    return redirect(url_for('schedule'))
+
+@app.route("/schedule")
+def schedule():
+    return render_template('schedule.html')
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0")
