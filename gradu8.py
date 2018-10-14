@@ -311,6 +311,7 @@ class PriorityQueue(object):
 
 
 from flask import Flask
+from flask import render_template
 app = Flask(__name__)
 hundred3 = 0
 hundred4 = 0
@@ -458,10 +459,8 @@ def index():
 
 @app.route("/student", methods = ['POST','GET'])
 def student():
-    if request.method == 'POST':
-        formObj = request.form
         s = Student([72717,72684],"AI",8)
-        schedule = findPath(s)
+        schedule = fastPath(s,19)
         return render_template('display.html',schedule)
 
 if __name__ == "__main__":
