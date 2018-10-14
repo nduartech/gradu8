@@ -329,9 +329,9 @@ def index():
 @app.route("/student", methods = ['POST','GET'])
 def student():
     if request.method == 'POST':
-        student = request.form
+        formObj = request.form
         print(student)
-        return render_template('display.html')
+        return render_template('display.html',SStudent)
 
 if __name__ == "__main__":
     app.run(debug = True)
