@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+    <head>
+        <style>
+            body {
+                background:url(Road.jpg);
+                background-size:cover;
+                margin:0;
+                }
+            
+            input {
+                width: 70%;
+                outline: none;
+                padding: 2.5px 3px;
+                border: 1px #aaa solid;
+                font-size: 15px;
+                background: #fff;
+                display: block;
+                margin: 20px auto;
+            }
+            
+            select {
+                width: 70%;
+                outline: none;
+                padding: 10px 11px;
+                border: 1px #aaa solid;
+                font-size: 15px;
+                background: #fff;
+                display: block;
+                margin: 20px auto;
+            }
+            
+            div {
+                width: 80%;
+                height: 900px;
+                background: rgba(0,0,0,.5);
+                box-shadow: 5px 4px 43px #000;
+                position: absolute;
+                top: 80px;
+                left: 125px;
+                
+            }
+            
+            form{
+                margin: 30px auto;
+                text-align: center;
+            }
+            
+            b{
+                font-size: 25px;
+                color:#fff;
+            }
+            
+            img{
+                display:block;
+                margin:-75px auto 0 auto;
+            }
+            
+            h3{
+                font-size: 20px;
+                color:#fff;
+            }
+          .button {
+                width: 70%;
+                background-color: #881c1c;
+                border: none;
+                color: #fff;
+                padding: 15px 32px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                margin: 4px 2px;
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <form action="" method="post">
+               
+               <img src ="hourglass.png">
+               <b>Required Information</b>
+               <h3>Name</h3>
+                <input type ="Name" name="" value="" placeholder="Name" id="" />
+                <h3>Credits</h3>
+                <input type ="Credits" name="" value="" placeholder="Credits" id="" />
+                <h3>School</h3>
+                <select name = "School">
+                    <option value = "empty"> </option>
+                    <option value = "Univerisity of Massachusetts - Amherst">University of Massachusetts - Amherst</option>
+                </select>
+                <h3>Degree</h3>
+                <select name = "Degree">
+                    <option value = "empty"> </option>
+                    <option value = "Bachelors of Science">Bachelors of Science</option>
+                    <option value = "Bachelors of Arts">Bachelors of Art</option>
+                </select>
+                <h3>Major</h3>
+                <select name = "Major">
+                    <option value = "empty"> </option>
+                    <option value = "Computer Science">Computer Science</option>
+                </select>
+                <h3>Concentration</h3>
+                <select name = "Concentration">
+                    <option value = "empty"> </option>
+                    <option value = "Software Engineering">Software Engineering</option>
+                    <option value = "Artificial Intelligence">Artificial Intelligence</option>
+                    <option value = "Search & Data Mining">Search and Data Mining</option>
+                    <option value = "Robotics, Visions, & Graphics">Robotics, Vision, and Graphics</option>
+                    <option value = "Theory of Computation">Theory of Computation</option>
+                    <option value = "Computer Architecture"> Computer Architecture</option>
+                    <option value = "Security & Privacy">Security and Privacy</option>
+                    <option value = "Networking">Networking</option>
+                    <option value = "Software Systems">Software Systems</option>
+                    <option value = "Programming Languages & Compilers">Programming Languages and Compilers</option>
+                </select>
+                <button class = "button">Next</button>
+            </form>
+        </div>
+    </body>
