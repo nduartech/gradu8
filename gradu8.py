@@ -53,13 +53,6 @@ class PriorityQueue(object):
     size = 0
 
     def __init__(self):
-<<<<<<< HEAD
-        self.name = ""
-        self.taken = []
-        self.degree = "B.S."
-        self.major = "Computer Science"
-        self.concentration = ""
-=======
         self.courses = []
         self.concentration = ""
         self.size = 0
@@ -87,13 +80,9 @@ class PriorityQueue(object):
 
         self.size += 1
 
->>>>>>> ecde453407e234ecb3cabc6d4edba0d2d422da67
 
-from flask import Flask, render_template, request
+from flask import Flask
 app = Flask(__name__)
-<<<<<<< HEAD
-app.secret_key = 's3cr3t'
-=======
 
 def fastPath(student):
     allSems = []
@@ -119,26 +108,13 @@ def fastPath(student):
         student.units += credits
         PQ = initializeQueue(student)
         allSems.add(semester)
->>>>>>> ecde453407e234ecb3cabc6d4edba0d2d422da67
 
     return allSems
 
-<<<<<<< HEAD
-def setup():
-    return "hi"
-
-@app.route("/")
-def init():
-    my_server.degree = "BS"
-    my_server.major = "CS"
-    return printHi()
-
-=======
 
 @app.route("/")
 def data():
     
->>>>>>> ecde453407e234ecb3cabc6d4edba0d2d422da67
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0")
