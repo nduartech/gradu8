@@ -88,7 +88,7 @@ def fastPath(student):
     allSems = []
     explored = {}
     PQ = initializeQueue(student)
-    nonCS = set([Course(0,"CHEM 111",[],[],[],4),Course(0,"GEOL 101",[],[],[],4),Course(0,"ENG 112",[],[],[],4),Course(0,"KIN 100",[],[],[],4),Course(0,"COMP-LIT 114",[],[],[],4),Course(0,"ANTHRO 102",[],[],[],4),Course(0,"EDUC 115",[],[],[],4)])
+    nonCS = set([Course(0,"CHEM111",[],[],[],4),Course(0,"GEOL101",[],[],[],4),Course(0,"ENG112",[],[],[],4),Course(0,"KIN100",[],[],[],4),Course(0,"COMP-LIT114",[],[],[],4),Course(0,"ANTHRO102",[],[],[],4),Course(0,"EDUCq115",[],[],[],4)])
     for tclass in student.taken:
         explored[tclass] = 1
     while not Optimal(allSems, student.units) and len(nonCS) > 0:
