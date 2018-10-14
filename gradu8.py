@@ -326,13 +326,10 @@ def fastPath(student):
 def index():
     return render_template('index.html')
 
-@app.route("/student")
+@app.route("/student", methods = ['POST'])
 def student():
-    return redirect(url_for('schedule'))
-
-@app.route("/schedule")
-def schedule():
-    return render_template('schedule.html')
+    student = request.form
+    return render_template('display.html')
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0")
