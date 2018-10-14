@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Gradua8: Academic Advising Automated</title>
+
+    <!-- Font Icon -->
+    <link rel="stylesheet" href="fonts/material-icon/css/material-design-iconic-font.min.css">
+    <link rel="stylesheet" href="vendor/nouislider/nouislider.min.css">
+
+    <!-- Main css -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="main">
+
+
+
+        <div class="container">
+            <div class="signup-content">
+             
+                </div>
+                     <img src="images/hourglass.png" align="middle">
+
+                <div class="signup-form">
+                    <div class ="Title">
+                    <h2>Please fill out the required information precisely to get your desired schedule.</h2>
+                    </div>
+                     
+                    
+                    <form method="POST" class="register-form" id="register-form">
+                        <div class="form-row">
+        
+                            <div class="form-group">
+                                <div class="form-input">
+                                    
+                                    <label for="first_name" class="required">Full Name</label>
+                                    <input type="text" name="first_name" id="first_name" />
+                                </div>
+                                <div class="form-input">
+                                    <label for="last_name" class="required">Major</label>
+                                    <input type="text" name="last_name" id="last_name" />
+                                </div>
+
+
+                              
+                                <div class="label-flex">
+                                        <label for="meal_preference">Concentration</label>
+                                        <a href="index.html#" class="form-link">Not listed?</a>
+                                    </div>
+                                    <div class="select-list">
+                                        <select name="meal_preference" id="meal_preference">
+                                        	<option value="Vegetarian">Software Engineering</option>
+                                            <option value="Vegetarian">Artificial Intelligence</option>
+                                            <option value="Kosher">Search and Data Mining</option>
+                                            <option value="Asian Vegetarian">Robotics, Vision, and Graphics</option>
+                                            <option value="Asian Vegetarian">Computer Architecture</option>
+                                            <option value="Asian Vegetarian">Theory of Computation</option>
+                                           <option value="Asian Vegetarian">Security and Privacy</option>
+                                            <option value="Asian Vegetarian">Networking</option>
+                                            <option value="Asian Vegetarian">Software Systems</option>
+                                            <option value="Asian Vegetarian">Programming Languages and Compilers</option>
+                                        </select>
+                                    </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="form-select">
+                                    
+                                </div>
+                                <div class="form-radio">
+                                    <div class="label-flex">
+                                        <label for="payment">Degree</label>
+                                        <a href="index.html#" class="form-link">Other? Tell us.</a>
+                                    </div>
+
+
+                                    <div class="form-radio-group">            
+                                        <div class="form-radio-item">
+                                            <input type="radio" name="payment" id="cash" checked>
+                                            <label for="cash">Bachelors of Science (B.S)</label>
+                                            <span class="check"></span>
+                                        </div>
+                                        <div class="form-radio-item">
+                                            <input type="radio" name="payment" id="cheque">
+                                            <label for="cheque">Bachelors of Arts (B.A)</label>
+                                            <span class="check"></span>
+                                        </div>
+                                        <div class="form-radio-item">
+                                            <input type="radio" name="payment" id="demand">
+                                            <label for="demand">Masters</label>
+                                            <span class="check"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                              
+
+
+                                <div class="form-input">
+                                    <label for="chequeno">Major</label>
+                                    <input type="text" name="chequeno" id="chequeno" />
+                                </div>
+				            </div>
+                        </div>
+                        <div class="donate-us">
+                            <label>Credit Load</label>
+                            <div class="price_slider ui-slider ui-slider-horizontal">
+                                <div id="slider-margin"></div>
+                                <span class="donate-value" id="value-lower"></span>
+                            </div>
+                        </div>
+                        
+                         
+   
+    
+    <div>
+    	<form action="" method="post">
+    <b>What classes do you have credit for?</b>
+    
+    <h3>Computer Science</h3>
+        
+    <label class="container1">CS 121: Introduction to Problem Solving with Computers
+    <input type="checkbox" value="72717">
+        <span class = "checkmark">
+        </span>
+    </label>
+    <label class="container1">CS 187: Programming with Data Structures
+    <input type="checkbox" value="72718">
+        <span class = "checkmark">
+        </span>
+    </label>
+    <label class="container1">CS 220: Programming Methodology
+    <input type="checkbox" value="72751">
+        <span class = "checkmark">
+        </span>
+    </label>
+    <label class="container1">CS 230: Computer Systems Principles
+    <input type="checkbox" value="72752">
+        <span class = "checkmark">
+        </span>
+    </label>
+    <label class="container1">CS 240: Reasoning Under Uncertainty
+    <input type="checkbox" value="72748">
+        <span class = "checkmark">
+        </span>
+    </label>
+    <label class="container1">CS 250: Introduction to Computation
+    <input type="checkbox" value="72721">
+        <span class = "checkmark">
+        </span>
+    </label>
+    
+    <h3>Math</h3>
+     <label class="container1">Math 131: Calculus I
+    <input type="checkbox" value="72684">
+        <span class = "checkmark">
+        </span>
+       </label>
+        <label class="container1">Math 132: Calculus II
+    <input type="checkbox" value="76932">
+        <span class = "checkmark">
+        </span>
+       </label>
+        <label class="container1">Math 233: Calculus III
+    <input type="checkbox" value="76889">
+        <span class = "checkmark">
+        </span>
+       </label>
+        
+       </form>
+   </div>
+                        <div class="form-submit">
+                            <input type="submit" value="Submit" class="submit" id="submit" name="submit" />
+                            <input type="submit" value="Reset" class="submit" id="reset" name="reset" />
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+ 
+
+    <!-- JS -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/nouislider/nouislider.min.js"></script>
+    <script src="vendor/wnumb/wNumb.js"></script>
+    <script src="vendor/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="vendor/jquery-validation/dist/additional-methods.min.js"></script>
+    <script src="js/main.js"></script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-23581568-13');
+</script>
+</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+</html>

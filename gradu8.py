@@ -29,9 +29,9 @@ class Course(object):
 
 
 class GlobalDictionary:
-    
+
     classes = {}
-    
+
     cs121 = Course(72717, "COMPSCI 121 Intro to Problem Solving w/ Computers", [], [72718], ["All"], 4)
     classes[72717] = cs121
 
@@ -142,19 +142,19 @@ class GlobalDictionary:
     cs460 = Course(72750, "COMPSCI 460 Introduction to Computer and Network Security", [[72709]], [62579], ["SOFTENG", "SECURPRV", "NETWORK", "SOFTSYS"], 3)
     classes[72750] = cs460
     #377
-    
+
     cs491IP = Course(80801, "COMPSCI 491IP S-Programming the iPhone and iPad", [[72726, 72711]], [], [], 3)
     classes[80801] = cs491IP
     #320 or 326
-                   
+
     cs497P = Course(72841, "COMPSCI 497P Special Topics - Programming Languages", [[72751], [72752], [72721]], [62579], [], 3)
     classes[72841] = cs497P
     #220 and 230 and 250
-    
+
     cs403 = Course(61195, "COMPSCI 403 Introduction to Robotics: Perception, Mechanics, Dynamics & Control", [[76894], [72751, 72752]], [], ["AI", "ROBVISGR"], 3)
     classes[61195] = cs403
     #235 and 220 or 230
-    
+
     cs445 = Course(55480, "COMPSCI 445 Information Systems", [[72751, 72752], [72724], [62041]], [], ["SOFTENG", "SRCHDATA", "THEORYCMP", "CMPARCH", "SECURPRV", "NETWORK", "SOFTSYS", "PROGLANG"], 3)
     classes[55480] = cs445
     #220 or 230, and 311 and 345
@@ -229,7 +229,8 @@ class PriorityQueue(object):
         self.size += 1
 
 
-from flask import Flask
+from flask import Flask, redirect, url_for, render_template
+
 app = Flask(__name__)
 
 
@@ -323,12 +324,7 @@ def fastPath(student):
 
 @app.route("/")
 def index():
-    student = Student([72717,72684],"AI",8)
-    schedule = fastPath(student)
-    semester1 = schedule[0]
-    class1 = semester1[0]
-    return class1.name
-    # return render_template('index.html')
+    return render_template('index.html')
 
 @app.route("/student")
 def student():
