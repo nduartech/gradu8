@@ -1,39 +1,39 @@
 class Student(object):
-    
+
     #taken is a list of ints, each representing a courseID
     #the student has earned credit for
     taken = []
-    
+
     #concentration is a string, representing the student's
     #desired concentration
     concentration = ""
 
-    credits = -1 
+    credits = -1
 
     def __init__(self,taken,concent,credits):
         self.taken = taken
         self.concentration = concent
         self.credits = credits
 
-    
+
 class Course(object):
-        
+
     #If the ID is -1, it hasn't been initialized
     ID = -1
-    
+
     name = ""
-    
+
     #pre-reqs is a list of lists, each one representing
     #the pre-reqs (two elements in the list is an either/or situation)
     preReqs = []
-    
+
     #children is a list of ints, each representing a courseID
     children = []
-    
+
     #concentrations is a list of strings, each representing a concentration type
     #"All" means it's required, and should have a high priority
     concentrations = []
-    
+
     #If credits is -1, it hasn't been properly initialized
     credits = -1
 
