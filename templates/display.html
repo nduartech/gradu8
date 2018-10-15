@@ -18,10 +18,10 @@
       {% for s in schedule: %}
         <li>
           {% for course in s: %}
-            <p>s</p> <br />
-          {% %}
+            <p>{{course.name}}</p> <br />
+          {% endfor %}
         </li>
-      {% %}
+      {% endfor %}
 </div>
 </body>
 </html>
