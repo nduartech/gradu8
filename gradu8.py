@@ -406,6 +406,12 @@ def majorComplete(allSems, units):
     return hundred3 >= 3 and hundred4 >= 3 and len(core_Courses) <= 1
 
 
+# Testing purposes only
+def printPQ(pq):
+    for course in pq.courses:
+        print(course.name)
+    print("~")
+
 def fastPath(student, creditThreshold):
     allSems = []
     explored = {}
@@ -448,6 +454,7 @@ def fastPath(student, creditThreshold):
         if hundred3 >= 3 and hundred4 >= 3:
             credits_left = 0 if 120-student.credits < 0 else 120-student.credits
             print("You're major requirements are complete! Units to graduation: " + str(credits_left))
+            printPQ(PQ)
             return allSems
 
     return allSems
@@ -459,7 +466,7 @@ def index():
 
 @app.route("/student", methods = ['POST','GET'])
 def student():
-        s = Student([],"",0)
+        s = Student([],"AI",0)
         sched = fastPath(s,18)
         return render_template('display.html', schedule=sched)
 
