@@ -459,9 +459,9 @@ def index():
 
 @app.route("/student", methods = ['POST','GET'])
 def student():
-        s = Student([72717,72684],"AI",8)
-        schedule = fastPath(s,19)
-        return render_template('display.html',schedule)
+        s = Student([],"",0)
+        sched = fastPath(s,18)
+        return render_template('display.html', schedule=sched)
 
 if __name__ == "__main__":
     app.run(debug = True)
