@@ -33,11 +33,11 @@ class Course(object):
 
 
 class GlobalDictionary:
-    
+
     classes = {}
-    
+
     cs121 = Course(72717, "COMPSCI 121 Intro to Problem Solving w/ Computers", [], [72718], ["All"], 4, 1, 0)
-    classes[72717] = cs121 
+    classes[72717] = cs121
 
     cs187 = Course(72718, "COMPSCI 187 Programming with Data Structures", [[72717]], [72724, 62041, 55482, 55555, 72773, 62073, 72751,72752,72748,72721], ["All"], 4, 1, 0)
     classes[72718] = cs187
@@ -72,7 +72,7 @@ class GlobalDictionary:
 
     cs305 = Course(72705, "COMPSCI 305 Social Issues in Computing", [[72751, 72752], [72748, 72721]], [], ["All"], 3, 3, 0)
     classes[72705] = cs305
-    #220 or 230, 240 or 250 
+    #220 or 230, 240 or 250
 
     cs320 = Course(72726, "COMPSCI 320 Software Engineering", [[72751]], [80801], ["All"], 4, 3, 0)
     classes[72726] = cs320
@@ -80,7 +80,7 @@ class GlobalDictionary:
 
     # cs326 = Course(72711, "COMPSCI 326 Web Programming", [[72751, 72752]], [80801, 62579], ["All"], 3)
     # classs[72711] = cs326
-    #220 or 230     
+    #220 or 230
 
     cs377 = Course(72709, "COMPSCI 377 Operating Systems", [[72752]], [72767, 72750, 62579], ["SOFTENG", "THEORYCMP", "CMPARCH", "SECURPRV", "NETWORK", "SOFTSYS", "PROGLANG"], 4, 3, 0)
     classes[72709] = cs377
@@ -88,7 +88,7 @@ class GlobalDictionary:
 
     cs311 = Course(72724, "COMPSCI 311 Introduction to Algorithms", [[72718], [72721]], [55480], ["All"], 4, 3, 0)
     classes[72724] = cs311
-    #187 and 250     
+    #187 and 250
 
     cs383 = Course(72764, "COMPSCI 383 Artifical Intelligence", [[72751, 72752], [72748]], [55508, 55443], ["AI", "ROBVISGR"], 3, 3, 0)
     classes[72764] = cs383
@@ -140,19 +140,19 @@ class GlobalDictionary:
     cs460 = Course(72750, "COMPSCI 460 Introduction to Computer and Network Security", [[72709]], [62579], ["SOFTENG", "SECURPRV", "NETWORK", "SOFTSYS"], 3, 4, 0)
     classes[72750] = cs460
     #377
-    
+
     cs491IP = Course(80801, "COMPSCI 491IP S-Programming the iPhone and iPad", [[72726]], [], [], 3, 4, 0)
     classes[80801] = cs491IP
     #320 or 326
-                   
+
     cs497P = Course(72841, "COMPSCI 497P Special Topics - Programming Languages", [[72751], [72752], [72721]], [62579], [], 3, 4, 0)
     classes[72841] = cs497P
     #220 and 230 and 250
-    
+
     cs403 = Course(61195, "COMPSCI 403 Introduction to Robotics: Perception, Mechanics, Dynamics & Control", [[76894], [72751, 72752]], [], ["AI", "ROBVISGR"], 3, 4, 0)
     classes[61195] = cs403
     #235 and 220 or 230
-    
+
     cs445 = Course(55480, "COMPSCI 445 Information Systems", [[72751, 72752], [72724], [62041]], [], ["SOFTENG", "SRCHDATA", "THEORYCMP", "CMPARCH", "SECURPRV", "NETWORK", "SOFTSYS", "PROGLANG"], 3, 4, 0)
     classes[55480] = cs445
     #220 or 230, and 311 and 345
@@ -190,24 +190,24 @@ class GlobalDictionary:
     #320
 
     cs575 = Course(80802, "COMPSCI 575 Combinatrics & Graph Theory", [[72721]], [], ["SOFTENG", "THEORYCMP"], 3, 5, 0)
-    classes[80802] = cs575    
+    classes[80802] = cs575
     #250
-    
+
     cs585 = Course(55443, "COMPSCI 585 Introduction to Natural Language Processing", [[72748], [72751, 72752]], [72829], ["AI", "SRCHDATA"], 3, 5, 0)
-    classes[72713] = cs585        
+    classes[72713] = cs585
     #240 and 220 or 230
 
     cs589 = Course(72821, "COMPSCI 589 Machine Learning", [[72764], [76894]], [], ["AI"], 3, 5, 0)
     classes[72713] = cs589
     #383 and 235
-        
+
     cs590A = Course(81567, "COMPSCI 590A System Defense and Test", [[]], [], [], 3, 5, 0)
     classes[81567] = cs590A
 
     cs590R = Course(72829, "COMPSCI 590R Applied Information Retrieval", [[72726], [72764, 55443, 55443]], [], [], 3, 5, 0)
-    classes[72829] = cs590R         
+    classes[72829] = cs590R
     #320 and 383 or 446 or 585
-    
+
     cs590S = Course(72801, "COMPSCI 590S Systems for Data Science", [[72724], [62041], [72709]], [], [], 3, 5, 0)
     classes[72801] = cs590S
     #311 and 345 and 377
@@ -215,18 +215,18 @@ class GlobalDictionary:
     cs591M = Course(82434, "COMPSCI 591M Seminar-Bioinformatics and Computational Biology", [[72748, 80027]], [], [], 3, 5, 0)
     classes[82434] = cs591M
     #240 or 515
-    
+
     cs592C = Course(82760, "COMPSCI 592C Seminar-Digital Civics", [[72751, 72752], [72712]], [], [], 3, 5, 0)
     classes[82760] = cs592C
     #220 or 230 and 325
 
     cs501 = Course(55423, "COMPSCI 501 Formal Language Theory", [[72724]], [], ["SOFTENG", "THEORYCMP", "CMPARCH"], 3, 5, 0)
-    classes[55423] = cs501        
+    classes[55423] = cs501
     #311
 
     cs535 = Course(55509, "COMPSCI 535 Computer Architecture", [[72792]], [], ["THEORYCMP", "CMPARCH", "SOFTSYS", "PROGLANG"], 3, 5, 0)
-    classes[55509] = cs535        
-    #335    
+    classes[55509] = cs535
+    #335
 
     cs590B = Course(61240, "COMPSCI 590B Detecting Interference in Networks", [[72767]], [], [], 3, 5, 0)
     classes[61240] = cs590B
@@ -300,17 +300,17 @@ class PriorityQueue(object):
     def add(self,course):
         course.priority = createPriority(course,self.concentration)
         if course.priority == 0:
-            self.courses.append(course)  
+            self.courses.append(course)
         elif course.priority == 10:
             self.courses.insert(0,course)
-        else: 
+        else:
             index = len(self.courses)
             while index > 0 and course.priority > self.courses[index-1].priority:
                 index -= 1
             self.courses.insert(index,course)
 
 
-from flask import Flask
+from flask import Flask, redirect, url_for, render_template, request
 app = Flask(__name__)
 hundred3 = 0
 hundred4 = 0
@@ -395,8 +395,8 @@ def printSemester(semester,count):
 
 def majorComplete(allSems, units):
     core_Courses = set([72717,72718,72684,76932,76889,72752,72751,76894,72748,72721,72705,72726,72724])
-    global hundred3 
-    global hundred4 
+    global hundred3
+    global hundred4
     for semester in allSems:
         for course in semester:
             if course.ID in core_Courses:
@@ -409,7 +409,7 @@ def fastPath(student, creditThreshold):
     allSems = []
     explored = {}
     PQ = initializeQueue(student)
-    nonCS = set([Course(0,"CHEMISTRY 111",[],[],[],4,1,0),Course(0,"GEOLOGY 101",[],[],[],4,1,0),Course(0,"ENGLISH 112",[],[],[],4,1,0),Course(0,"KINIES 100",[],[],[],4,1,0),Course(0,"COMP-LIT 114",[],[],[],4,1,0),Course(0,"ANTHRO 102",[],[],[],4,1,0),Course(0,"EDUCATION 115",[],[],[],4,1,0)])
+    nonCS = set([Course(0,"CHEMISTRY 111",[],[],[],4,1,0),Course(0,"GEOLOGY 101",[],[],[],4,1,0),Course(0,"ENGLISH 112",[],[],[],4,1,0),Course(0,"KINESIOLOGY 100",[],[],[],4,1,0),Course(0,"COMP-LIT 114",[],[],[],4,1,0),Course(0,"ANTHROPOLOGY 102",[],[],[],4,1,0),Course(0,"EDUCATION 115",[],[],[],4,1,0)])
     for tclass in student.taken:
         explored[tclass] = 1
 
@@ -435,8 +435,8 @@ def fastPath(student, creditThreshold):
 
             if credits > (creditThreshold-4):
                 break
-        
-        semester.append(Course(0,"Choose " + str(creditThreshold - credits)+ " credit course",[],[],[],creditThreshold-credits,1,0))   
+
+        semester.append(Course(0,"Choose " + str(creditThreshold - credits)+ " credit course",[],[],[],creditThreshold-credits,1,0))
         printSemester(semester,count)
         student.credits += creditThreshold
         PQ = initializeQueue(student)
@@ -460,9 +460,34 @@ def index():
 def student():
     if request.method == 'POST':
         formObj = request.form
+        print(formObj)
+        # CS121: 72717
+        # cs187: 72718
+        # m131: 72684
+        # m132: 76932
+        # m233: 76889
+        # cs220: 72751
+        # cs230: 72752
+        # cs240: 72748
+        # cs250: 72721
+
+        # Software engineering: SOFTENG
+        # Artifical Intelligence : AI
+        # Search and Data Mining: SRCHDATA
+        # Robotics and Computer Vision: ROBVISGR
+        # Theory Computing : THEORYCMP
+        # Computer Architecture : THEORYCMP
+        # Networking:NETWORK
+        # Software Systems : SOFTSYS
         s = Student([72717,72684],"AI",8)
-        schedule = findPath(s)
-        return render_template('display.html',schedule)
+
+
+
+        schedule = fastPath(s,19)
+        for i in schedule:
+            for p in i:
+                print(p.name)
+        return render_template('display.html',schedule=schedule)
 
 if __name__ == "__main__":
     app.run(debug = True)
