@@ -310,12 +310,10 @@ class PriorityQueue(object):
             self.courses.insert(index,course)
 
 
-<<<<<<< HEAD
 from flask import Flask, redirect, url_for, render_template, request
-=======
 from flask import Flask
 from flask import render_template
->>>>>>> 04d35938ff920b071f7abb66dece08dfaaa15a07
+
 app = Flask(__name__)
 hundred3 = 0
 hundred4 = 0
@@ -470,7 +468,6 @@ def index():
 
 @app.route("/student", methods = ['POST','GET'])
 def student():
-<<<<<<< HEAD
     if request.method == 'POST':
         formObj = request.form
         print(formObj)
@@ -501,11 +498,9 @@ def student():
             for p in i:
                 print(p.name)
         return render_template('display.html',schedule=schedule)
-=======
         s = Student([],"AI",0)
         sched = fastPath(s,18)
         return render_template('display.html', schedule=sched)
->>>>>>> 04d35938ff920b071f7abb66dece08dfaaa15a07
 
 if __name__ == "__main__":
     app.run(debug = True)
