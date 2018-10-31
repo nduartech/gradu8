@@ -25,13 +25,3 @@ flask run
 ```
 deactivate
 ```
-----------
-Back-end TODO:
-* Create
-* Modify
-* Export
-----------
-Front-end TODO:
-* Initial form
-* Interactive Course Planning Page
-* Export to PDF process
