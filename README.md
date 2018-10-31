@@ -19,7 +19,7 @@ export FLASK_APP=gradu8.py
 flask run
 ```
 
-## 3) Hack like a mad person
+## 3) Run script on Flask server
 
 - To exit the virtual environment:
 ```
